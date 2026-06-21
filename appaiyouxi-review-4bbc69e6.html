@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background-color: #f2f4f7;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      padding: 3rem 2rem 2.8rem;
+      margin-bottom: 2.8rem;
+      border: 1px solid #e6eaef;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 660px;
+      margin: 0 auto 1.6rem;
+      color: #334155;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #eef2f7;
+      padding: 0.3rem 1.4rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      color: #2c3e50;
+      border: 1px solid #dce2eb;
+    }
+
+    /* 卡片分区通用 */
+    .card-section {
+      background: #ffffff;
+      border-radius: 1.6rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      padding: 2rem 2rem 2.2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e4e9f0;
+    }
+
+    .card-section h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #eef2f6;
+    }
+
+    .card-section h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 1.5rem 0 0.6rem;
+      color: #1e293b;
+    }
+
+    .card-section p {
+      margin-bottom: 0.9rem;
+      color: #2d3a4a;
+    }
+
+    .card-section ul {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .card-section li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+    }
+
+    .card-section li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #5f7a9a;
+      font-weight: 600;
+    }
+
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-top: 0.8rem;
+    }
+
+    .flex-grid .item {
+      flex: 1 1 200px;
+      background: #f8faff;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1rem;
+      border: 1px solid #e0e7ef;
+      transition: box-shadow 0.2s;
+    }
+
+    .flex-grid .item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .flex-grid .item span {
+      font-size: 0.9rem;
+      color: #3f4f63;
+    }
+
+    .reminder-box {
+      background: #f6f9ff;
+      border-left: 5px solid #6e8bb3;
+      border-radius: 0.8rem;
+      padding: 1rem 1.4rem;
+      margin: 1.2rem 0 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: #1e2c3c;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #3d5167;
+    }
+
+    .footer-bar {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: #52637a;
+      font-size: 0.9rem;
+      border-top: 1px solid #dce2ea;
+      padding-top: 2rem;
+    }
+
+    .footer-bar a {
+      color: #1e3a5f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .inline-link {
+      color: #1e3a5f;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed #b6c7db;
+    }
+
+    .inline-link:hover {
+      border-bottom: 1px solid #1e3a5f;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .hero {
+        padding: 2rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card-section {
+        padding: 1.5rem 1.2rem;
+      }
+      .flex-grid .item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Hero 区 -->
+  <div class="hero">
+    <h1>爱游戏 · 简明指南</h1>
+    <p>了解平台定位、内容架构与使用要点。无论初次接触还是深度用户，这份说明都能帮你更顺畅地探索。</p>
+    <div class="tagline">知识型指引 · 聚焦实用信息</div>
+  </div>
+
+  <!-- 优势区：定位 + 特点 -->
+  <div class="card-section">
+    <h2>平台优势与内容特征</h2>
+    <p><a href="https://appaiyouxi.com.cn" class="inline-link">爱游戏</a> 围绕游戏内容聚合与信息整合展开，注重提供结构清晰的浏览体验。以下特征构成其核心价值：</p>
+    <div class="flex-grid">
+      <div class="item">
+        <strong>分类导航</strong>
+        <span>按类型、题材、热度组织内容，降低查找成本</span>
+      </div>
+      <div class="item">
+        <strong>内容更新</strong>
+        <span>保持信息的新鲜度与时效性，定期补充条目</span>
+      </div>
+      <div class="item">
+        <strong>轻量界面</strong>
+        <span>减少冗余装饰，突出信息本身与操作效率</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 说明区：场景与使用视角 -->
+  <div class="card-section">
+    <h2>常见使用场景</h2>
+    <p>根据不同的需求阶段，<a href="https://appaiyouxi.com.cn" class="inline-link">爱游戏</a> 可以提供针对性的帮助：</p>
+    <ul>
+      <li><strong>探索阶段：</strong>通过分类索引快速筛选感兴趣的类型，缩小选择范围，避免信息过载。</li>
+      <li><strong>比较阶段：</strong>留意平台中列出的基本描述与标签，辅助判断是否符合个人偏好。</li>
+      <li><strong>回顾阶段：</strong>条目化的内容结构适合快速扫描，便于重新定位之前留意过的信息。</li>
+    </ul>
+    <div class="reminder-box">
+      <strong>说明：</strong> 平台内容仅作信息展示与参考，具体体验请以实际产品为准。每次访问都可能看到更新内容。
+    </div>
+  </div>
+
+  <!-- 访问提醒区（FAQ 摘要） -->
+  <div class="card-section">
+    <h2>FAQ 摘要 · 访问提醒</h2>
+    <div class="faq-item">
+      <strong>Q：是否需要注册才能浏览？</strong>
+      <p>大部分内容可直接查看，部分互动功能可能需要账户。建议先浏览公开部分，再决定是否注册。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：内容是否会频繁变动？</strong>
+      <p>平台会不定期调整条目与分类。若发现信息与上次访问不同，属于正常的内容维护行为。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：遇到加载或显示问题怎么办？</strong>
+      <p>可尝试刷新页面或更换浏览器。如持续异常，建议稍后重试。平台本身不存储用户敏感数据。</p>
+    </div>
+    <div class="reminder-box" style="margin-top: 1.4rem;">
+      <strong>提醒：</strong> 任何网页信息均存在时效性。请以 <a href="https://appaiyouxi.com.cn" class="inline-link">爱游戏</a> 页面实际显示内容为准。如发现链接或描述异常，可通过常规渠道反馈。
+    </div>
+  </div>
+
+  <!-- 底部链接 -->
+  <div class="footer-bar">
+    更多内容请访问 <a href="https://appaiyouxi.com.cn">爱游戏</a> ·
+    本页为独立介绍页，仅提供参考指引
+  </div>
+
+</div>
+</body>
+</html>
